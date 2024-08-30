@@ -1,0 +1,267 @@
+.my-carousel {
+  padding: 0;
+}
+
+.carousel-item {
+  height: 640px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.carousel-indicators {
+  margin-bottom: 0rem;
+  bottom: 55px;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 4px;
+  width: 92px;
+  height: 4px;
+
+  background: #79747e, #fff;
+}
+
+.carousel-indicators .active {
+  background-color: var(--brand-violet);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.carousel-title {
+  border-radius: 20px;
+  padding: 16px 60px;
+  width: 760px;
+  background: rgba(255, 255, 255, 0.7);
+
+  h5 {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--main-text);
+    text-align: center;
+  }
+}
+
+// ========= slide 1 ===========
+
+.carousel-title {
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 660px;
+  }
+}
+
+.mask-img-hotel {
+  position: absolute;
+  right: 0;
+}
+
+.hotel1 {
+  transform: rotate(346deg);
+  position: relative;
+  z-index: 6;
+}
+
+.hotel2 {
+  transform: rotate(390deg);
+  position: relative;
+  z-index: 4;
+}
+
+.hotel3 {
+  transform: rotate(346deg);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// ======== slide 2 =========
+.carousel-inner .carousel-item:nth-child(2) {
+  .mask-img {
+    position: relative;
+    left: 140px;
+    top: 20px;
+
+    @media (max-width: 1199px) {
+      left: 10px;
+    }
+  }
+
+  .mask-img::before {
+    display: inline-block;
+    content: "";
+    background: url("/images/hero/pin.webp");
+    width: 30px;
+    height: 49px;
+    position: absolute;
+    top: -30px;
+    left: 145px;
+  }
+
+  .carousel-title {
+    position: absolute;
+    top: 28%;
+    left: 24%;
+
+    z-index: 1;
+
+    @media (max-width: 766.99px) {
+      width: 342px;
+      left: 39%;
+      h5 {
+        font-size: 30px;
+      }
+    }
+
+    @media (min-width: 767.99px) and (max-width: 1200px) {
+      width: 555px;
+      top: 35%;
+      left: 26%;
+      h5 {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .mask-elem {
+    position: absolute;
+    right: 11px;
+    bottom: 0;
+  }
+}
+
+// =========== slide 3 ==========
+
+.carousel-inner .carousel-item:nth-child(3) {
+  .mask {
+    .mask-img img {
+      width: 480px;
+      height: 320px;
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 250px;
+        height: 250px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        width: 331px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        width: 400px;
+      }
+    }
+
+    .carousel-title {
+      border-radius: 0;
+      padding: 0;
+      width: 640px;
+      margin: 56px 0 34px 148px;
+      background: none;
+
+      h5 {
+        text-align: start;
+        color: #fff;
+      }
+
+      @media (max-width: 766.99px) {
+        width: 335px;
+        left: 39%;
+        margin: 0 auto;
+
+        position: absolute;
+        bottom: 290px;
+        left: 58px;
+        h5 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .mask-img::before {
+    content: "";
+    background: none;
+  }
+}
+
+// ============ slide 4 =========
+
+.carousel-inner .carousel-item:nth-child(4) {
+  .mask {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    .carousel-title {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      z-index: 8;
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        left: 14%;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 660px;
+        left: 9%;
+      }
+    }
+
+    .mask-img::before {
+      display: inline-block;
+      content: "";
+      background: url("/images/hero/slide4-img-elem.webp");
+      width: 49px;
+      height: 80px;
+      position: absolute;
+      top: 285px;
+      left: 134px;
+      z-index: 3;
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        top: 375px;
+      }
+    }
+
+    .mask-img-img {
+      width: 346px;
+      height: 282px;
+      transform: rotate(-11deg);
+    }
+  }
+}
+
+@media (max-width: 767.9px) {
+  .carousel-indicators [data-bs-target] {
+    border-radius: 4px;
+    width: 30px;
+    height: 2px;
+
+    background: #79747e, #fff;
+  }
+
+  .carousel-indicators {
+    bottom: -20px;
+  }
+}
